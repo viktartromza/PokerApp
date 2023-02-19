@@ -1,4 +1,4 @@
-package tms.com.domain;
+package com.tms.domain;
 
 import lombok.Data;
 

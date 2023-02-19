@@ -1,6 +1,6 @@
-package tms.com.service;
+package com.tms.service;
 
-import tms.com.domain.User;
+import com.tms.domain.User;
 
 import java.sql.*;
 
@@ -26,7 +26,7 @@ User user = new User();
         user.setLogin(resultSet.getString("login"));
         user.setPassword(resultSet.getString("password"));
         user.setRegDate(resultSet.getDate("registration_date"));
-        user.setEmail(resultSet.getString("email"));
+        user.setEmail(resultSet.getString("e_mail"));
         user.setScore(resultSet.getInt("score"));
 
         PreparedStatement statementUserData = connection.prepareStatement("SELECT * FROM users_data WHERE user_id=?");

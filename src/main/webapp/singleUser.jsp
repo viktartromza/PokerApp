@@ -1,4 +1,4 @@
-<%@ page import="tms.com.domain.User" %><%--
+<%@ page import="com.tms.domain.User" %><%--
   Created by IntelliJ IDEA.
   User: Viktar
   Date: 07.02.2023

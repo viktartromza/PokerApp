@@ -1,7 +1,8 @@
-package tms.com.servlet;
+package com.tms.servlet;
 
-import tms.com.service.UserCrudService;
-import tms.com.domain.User;
+import com.tms.service.UserCrudService;
+import com.tms.domain.User;
+import org.apache.log4j.Logger;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -13,9 +14,10 @@ import java.io.IOException;
 public class UserCrudServlet extends HttpServlet {
 
     UserCrudService userCrudService = new UserCrudService();
-
+private static final Logger log = Logger.getLogger(UserCrudServlet.class);
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       log.info("doing/user Get method!");
         int requestUserId = Integer.parseInt(request.getParameter("id"));
         User user = userCrudService.getUserById(requestUserId);
         request.setAttribute("user", user);
@@ -24,6 +26,17 @@ public class UserCrudServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        log.info("doing/user Post method!");
+    }
 
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPut(req, resp);
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        log.info("doing/user Delete  method!");
+        super.doDelete(req, resp);
     }
 }
