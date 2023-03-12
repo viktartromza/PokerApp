@@ -1,4 +1,5 @@
 import com.tms.domain.User;
+import com.tms.domain.Wallet;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -8,7 +9,7 @@ public class MyFirstTest {
     static User user;
     @BeforeAll
     static void initTest() {
-        User user = new User();
+        User user = new User(new Wallet());
         user.setFirstName("Vladimir");
         System.out.println("Hello!");
     }
