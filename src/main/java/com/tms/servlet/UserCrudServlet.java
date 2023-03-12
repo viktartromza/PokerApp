@@ -1,7 +1,5 @@
 package com.tms.servlet;
 
-import com.tms.service.UserCrudService;
-import com.tms.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,11 +11,11 @@ import java.io.IOException;
 
 @WebServlet("/user")
 public class UserCrudServlet extends HttpServlet {
-
+/*
     UserCrudService userCrudService = new UserCrudService();
 private static final Logger log = LoggerFactory.getLogger(UserCrudServlet.class);
-    //@Override
-  // protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
   //    log.info("doing/user Get method!");
   //     int requestUserId = Integer.parseInt(request.getParameter("id"));
   //     User user = userCrudService.getUserById(requestUserId);
@@ -49,5 +47,5 @@ private static final Logger log = LoggerFactory.getLogger(UserCrudServlet.class)
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.info("doing/user Delete  method!");
         super.doDelete(req, resp);
-    }
+    }*/
 }
